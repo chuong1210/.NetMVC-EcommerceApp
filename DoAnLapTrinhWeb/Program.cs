@@ -1,6 +1,8 @@
 ﻿using DoAnLapTrinhWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using DoAnLapTrinhWeb.Controllers;
+using DoAnLapTrinhWeb.Helper;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +25,15 @@ builder.Services.AddSession(options =>
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+	options.LoginPath = "/KhachHang/DangNhap";
+	options.AccessDeniedPath = "/AccessDenied";
+});
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

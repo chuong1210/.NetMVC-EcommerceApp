@@ -257,3 +257,4 @@ C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb\bin\Debug\net7.0\Swa
 C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb\obj\Debug\net7.0\DoAnLapTrinhWeb.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb\bin\Debug\net7.0\AutoMapper.dll

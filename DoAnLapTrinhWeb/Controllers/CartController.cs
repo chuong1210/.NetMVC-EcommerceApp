@@ -3,7 +3,6 @@ using DoAnLapTrinhWeb.Helper;
 using DoAnLapTrinhWeb.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 namespace DoAnLapTrinhWeb.Controllers
 {
 	public class CartController : Controller
@@ -14,8 +13,7 @@ namespace DoAnLapTrinhWeb.Controllers
         {
 			db = context;
         }
-		const string CART_KEY = "MY_CART";
-		public List<CartItem> Cart => HttpContext.Session.Get<List<CartItem>>(CART_KEY)?? new List<CartItem>();
+		public List<CartItem> Cart => HttpContext.Session.Get<List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
         public IActionResult Index()
 		{
 			return View(Cart);
@@ -55,7 +53,7 @@ namespace DoAnLapTrinhWeb.Controllers
                 item.SoLuong += quantity;
             }
 
-            HttpContext.Session.Set(CART_KEY, gioHang);
+            HttpContext.Session.Set(StaticMethod.CART_KEY, gioHang);
 
             return RedirectToAction("Index");
         }
@@ -66,7 +64,7 @@ namespace DoAnLapTrinhWeb.Controllers
             if (item != null)
             {
                 gioHang.Remove(item);
-                HttpContext.Session.Set(CART_KEY, gioHang);
+                HttpContext.Session.Set(StaticMethod.CART_KEY, gioHang);
             }
             return RedirectToAction("Index");
         }

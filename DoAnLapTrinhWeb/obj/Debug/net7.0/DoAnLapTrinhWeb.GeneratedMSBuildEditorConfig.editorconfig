@@ -20,26 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoa/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/KhachHang/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXERhbmdLeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Shared/Components/Cart/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Shared/Components/MenuLoai/Default.cshtml]

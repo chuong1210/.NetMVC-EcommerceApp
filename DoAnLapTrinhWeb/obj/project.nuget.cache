@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rhlJ2gVcV++9h7TUZkbQbipvud5sacOWQB4z0439DHIlfvD/h6eg6/V4WxZ0nNKKfQV003IoZuMNEsYn7WNYsw==",
+  "dgSpecHash": "ZrQ7HRS5mW0sjWNPU3XLMhARNv0Tbmx+JxmmRl/o9ANoqPcHABmqWrSg8V/5u7ygiEQL2WpnmnY5Zt3wJfa9tQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\chuon\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\chuon\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\chuon\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\chuon\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

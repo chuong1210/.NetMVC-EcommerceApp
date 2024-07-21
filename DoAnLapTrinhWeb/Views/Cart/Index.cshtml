@@ -46,26 +46,26 @@
                             </p>
                         </td>
                         <td>
-                            <p class="mb-0 mt-4">$ @item.DonGia</p>
+                                <p class="mb-0 mt-4" data-id="@item.MaHh">@item.DonGia</p>
                         </td>
                         <td>
                             <div class="input-group quantity mt-4" style="width: 100px;">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
+                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" data-id="@item.MaHh">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
                                 </div>
-                                <input type="text" class="form-control form-control-sm text-center border-0" name="quantity" value="@item.SoLuong">
+                                    <input type="text" class="form-control form-control-sm text-center border-0" name="quantity" id="quantity-@item.MaHh" value="@item.SoLuong">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border" >
-                                        <i class="fa fa-plus"></i>
-                                    </button>
+                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border" data-id="@item.MaHh">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <p class="mb-0 mt-4">$ @item.ThanhTien</p>
-                        </td>
+                                <p class="mb-0 mt-4" data-id="@item.MaHh">$ @(item.ThanhTien )</p>
+                            </td>
                         <td>
                             <a asp-action="RemoveCart" asp-controller="Cart" asp-route-id="@item.MaHh" class="btn btn-md rounded-circle bg-light border mt-4">
                                 <i class="fa fa-times text-danger"></i>
@@ -110,4 +110,54 @@
         </div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var currentQuantity = 0;
+    $(document).ready(function () {
+        $('.btn-plus').click(function () {
+            var itemId = $(this).data('id');
+            var quantityInput = $('#quantity-' + itemId);
+            currentQuantity = parseInt(quantityInput.val()); // Update currentQuantity
+            updateCartItemTotal(itemId);
+        });
+
+        $('.btn-minus').click(function () {
+            var itemId = $(this).data('id');
+            var quantityInput = $('#quantity-' + itemId);
+            currentQuantity = parseInt(quantityInput.val()); // Update currentQuantity
+            if (currentQuantity > 1) {
+                updateCartItemTotal(itemId);
+            }
+        });
+
+        // Hàm cập nhật tổng tiền của một mục trong giỏ hàng
+        function updateCartItemTotal(itemId) {
+            var quantity = parseInt($('#quantity-' + itemId).val());
+            var unitPrice = parseFloat($('p.unit-price[data-id="' + itemId + '"]').text().replace('$', ''));
+            var totalPrice = quantity * unitPrice;
+            $('p.total-price[data-id="' + itemId + '"]').text('$' + totalPrice.toFixed(2));
+
+            updateSubtotalAndTotal();
+        }
+
+        // Hàm cập nhật tổng tiền giỏ hàng
+        function updateSubtotalAndTotal() {
+            var subtotal = 0;
+            $('tbody tr').each(function () {
+                var itemTotal = parseFloat($(this).find('p.total-price').text().replace('$', ''));
+                subtotal += itemTotal;
+            });
+
+            var shipping = 3.00;
+            var total = subtotal + shipping;
+
+            $('#subtotal').text('$' + subtotal.toFixed(2));
+            $('#total').text('$' + total.toFixed(2));
+        }
+
+        // Initial update of subtotal and total
+        updateSubtotalAndTotal();
+    });
+</script>
 <!-- Cart Page End -->
