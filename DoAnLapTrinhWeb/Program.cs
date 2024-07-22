@@ -26,11 +26,20 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+builder.Services.AddAuthorization(options =>
 {
-	options.LoginPath = "/KhachHang/DangNhap";
-	options.AccessDeniedPath = "/AccessDenied";
+	options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
+	options.AddPolicy("UserPolicy", policy => policy.RequireRole("User"));
 });
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+	.AddCookie(options =>
+	{
+		options.LoginPath = "/KhachHang/DangNhap";
+		options.AccessDeniedPath = "/AccessDenied";
+	});
+
+
 
 var app = builder.Build();
 
@@ -54,6 +63,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

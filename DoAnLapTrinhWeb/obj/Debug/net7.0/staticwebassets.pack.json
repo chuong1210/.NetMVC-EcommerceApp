@@ -345,6 +345,14 @@
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\android_300200.png"
     },
     {
+      "Id": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\extra285.png",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\extra285.png"
+    },
+    {
+      "Id": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\logo.png",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\man.jpg",
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\man.jpg"
     },

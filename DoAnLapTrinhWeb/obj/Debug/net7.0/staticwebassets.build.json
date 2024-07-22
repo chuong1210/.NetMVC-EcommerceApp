@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L7WvgVtbFDnbHM6ldrEGgk4KbF/nLn/VVTTBYPA5aZo=",
+  "Hash": "oHHtZFUYYzEAgwhBY1X+M/sbRrkNMR6kdofO/fzfWfU=",
   "Source": "DoAnLapTrinhWeb",
   "BasePath": "_content/DoAnLapTrinhWeb",
   "Mode": "Default",
@@ -4639,6 +4639,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\Author.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\extra285.png",
+      "SourceId": "DoAnLapTrinhWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\",
+      "BasePath": "_content/DoAnLapTrinhWeb",
+      "RelativePath": "Hinh/KhachHang/extra285.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\extra285.png"
+    },
+    {
+      "Identity": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\logo.png",
+      "SourceId": "DoAnLapTrinhWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\",
+      "BasePath": "_content/DoAnLapTrinhWeb",
+      "RelativePath": "Hinh/KhachHang/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\logo.png"
     },
     {
       "Identity": "C:\\Users\\chuon\\source\\repos\\DoAnLapTrinhWeb\\DoAnLapTrinhWeb\\wwwroot\\Hinh\\KhachHang\\man.jpg",
