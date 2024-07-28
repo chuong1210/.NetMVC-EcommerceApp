@@ -16,8 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\chuon\source\repos\DoAnLapTrinhWeb\DoAnLapTrinhWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Cart/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Cart/PaymentFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxQYXltZW50RmFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/Cart/Succcess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTdWNjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/chuon/source/repos/DoAnLapTrinhWeb/DoAnLapTrinhWeb/Views/HangHoa/Detail.cshtml]

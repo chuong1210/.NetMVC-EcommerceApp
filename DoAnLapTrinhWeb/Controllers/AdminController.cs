@@ -2,6 +2,7 @@
 using DoAnLapTrinhWeb.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace DoAnLapTrinhWeb.Controllers
 {
@@ -20,10 +21,23 @@ namespace DoAnLapTrinhWeb.Controllers
 			var users = db.KhachHangs.ToList();
 			return View(users);
 		}
-
-		public IActionResult Dashboard()
+        [Authorize(Policy = "AdminOnly")]
+        public IActionResult Dashboard()
 		{
-			return View();
+            // Lấy dữ liệu từ database
+            var tongSoSanPham = db.HangHoas.Count();
+            var tongSoDonHang = db.HoaDons.Count();
+            var doanhThu = db.ChiTietHds.Sum(dh => dh.DonGia);
+
+            // Lấy danh sách sản phẩm mới
+            var sanPhamMoi = db.HangHoas.OrderByDescending(hh => hh.NgaySx).Take(5).ToList();
+
+            ViewBag.TongSoSanPham = tongSoSanPham;
+            ViewBag.TongSoDonHang = tongSoDonHang;
+            ViewBag.DoanhThu = doanhThu;
+            ViewBag.SanPhamMoi = sanPhamMoi;
+
+            return View();
 		}
 
 	}

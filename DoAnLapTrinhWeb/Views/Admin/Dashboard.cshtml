@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@using DoAnLapTrinhWeb.Models // Thay thế bằng namespace của bạn
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Tổng số sản phẩm
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongSoSanPham</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Tổng số đơn hàng
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongSoDonHang</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Doanh thu
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.DoanhThu</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Danh sách sản phẩm mới
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.SanPhamMoi)
+                            {
+                                <tr>
+                                    <td>@item.MaHh</td>
+                                    <td>@item.TenHh</td>
+                                    <td>@item.DonGia</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

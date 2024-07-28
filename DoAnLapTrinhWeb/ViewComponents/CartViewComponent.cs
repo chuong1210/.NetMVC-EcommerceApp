@@ -8,7 +8,10 @@ namespace DoAnLapTrinhWeb.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var carts = HttpContext.Session.Get <List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
+            List<CartItem> carts = HttpContext.User.Identity.IsAuthenticated
+              ? HttpContext.Session.Get<List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>()
+              : new List<CartItem>();
+           // var carts = HttpContext.Session.Get <List<CartItem>>(StaticMethod.CART_KEY) ?? new List<CartItem>();
             CartVM rs = new CartVM
             {
                 //  Quantity = carts.Sum(ct => ct.SoLuong),

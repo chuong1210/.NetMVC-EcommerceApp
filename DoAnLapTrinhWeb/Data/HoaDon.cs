@@ -31,6 +31,8 @@ public partial class HoaDon
 
     public string? GhiChu { get; set; }
 
+    public string? SoDienThoai { get; set; }
+
     public virtual ICollection<ChiTietHd> ChiTietHds { get; set; } = new List<ChiTietHd>();
 
     public virtual KhachHang MaKhNavigation { get; set; } = null!;

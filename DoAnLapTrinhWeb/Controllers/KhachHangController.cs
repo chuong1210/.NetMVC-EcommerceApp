@@ -98,9 +98,18 @@ namespace DoAnLapTrinhWeb.Controllers
 			{
 				new Claim(ClaimTypes.Name, user.HoTen),
 				new Claim(ClaimTypes.Email, user.Email),
-				new Claim("CustomerID", user.MaKh),
+				new Claim(StaticMethod.CLAIM_CUSTOMERID, user.MaKh),
 
-				new Claim(ClaimTypes.Role, user.VaiTro == 0 ? "User" : "Admin") // Assuming VaiTro is the role identifier
+				new Claim(ClaimTypes.Role, user.VaiTro == 0 ? "User" : "Admin") ,// Assuming VaiTro is the role identifie
+																				// 
+		 /*       new Claim(ClaimTypes.Role, user.VaiTro switch
+				{
+					0 => "User",
+					1 => "UserVip1",
+					2 => "UserVip2",
+					3 => "Admin",
+					_ => "User" // Mặc định là User nếu không tìm thấy vai trò
+				})*/
             };
 
 							var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -156,8 +165,11 @@ namespace DoAnLapTrinhWeb.Controllers
 		
 		[Authorize]
 		public async Task<IActionResult> Logout()
-		{
-			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        {
+            HttpContext.Session.Remove(StaticMethod.CART_KEY);
+          //  Response.Cookies.Delete(StaticMethod.CART_KEY);
+
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 			return RedirectToAction("Index", "Home");
 		}
 		/*[HttpGet]
